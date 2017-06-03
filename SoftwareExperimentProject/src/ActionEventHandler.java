@@ -52,6 +52,7 @@ public class ActionEventHandler implements ActionListener{
 		margarita.addActionListener(selectMargaritaQuantity);
 		ActionListener selectSidecarQuantity = new SelectingSidecarQuantity();
 		sidecar.addActionListener(selectSidecarQuantity);
+		exit.addActionListener(new ClickingExitInMenu(showMenuFrame));
 		
 		showMenuFrame.setVisible(true);
 	}
