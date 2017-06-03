@@ -1,5 +1,12 @@
 
 public class Bartender{
+	static int totalCostofAllDrinks=0;
+	static int numMartini=0;
+	static int numManhattan=0;
+	static int numBrooklyn=0;
+	static int numDaiquiri=0;
+	static int numMargarita=0;
+	static int numSidecar=0;
 	public Cocktail makeCocktail(MenuItem menuItem){
 		Cocktail cocktail = new Cocktail(menuItem);
 		return cocktail;

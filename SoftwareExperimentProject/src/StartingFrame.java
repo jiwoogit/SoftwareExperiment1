@@ -14,7 +14,7 @@ public class StartingFrame extends JFrame{
 	   Startingpanel startingpanel = new Startingpanel();
 	   content = getContentPane();     
 	   content.add(startingpanel, BorderLayout.CENTER);
-	   setBounds(120,120,600,600);
+	   setBounds(600,120,600,600);
 		
 	   setVisible(true);
 	 }

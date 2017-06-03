@@ -16,11 +16,11 @@ import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 import javax.swing.text.DefaultFormatter;
 
-public class SelectingMartiniQuantity implements ActionListener{
+public class SelectingDaiquiriQuantity implements ActionListener{
 	
-		MenuItem Martini= new MenuItem("Martini",390000);
-	public SelectingMartiniQuantity(){
-		MenuItem Martini = new MenuItem("Martini",390000);
+	MenuItem Daiquiri = new MenuItem("Daiquiri",690000);
+	public SelectingDaiquiriQuantity(){
+		MenuItem Daiquiri = new MenuItem("Daiquiri",690000);
 	}
 	
 	public void actionPerformed(ActionEvent e){
@@ -34,7 +34,7 @@ public class SelectingMartiniQuantity implements ActionListener{
 		
 		SpinnerNumberModel numModel = new SpinnerNumberModel(0,0,100,1);
 		menu_sp.setModel(numModel);
-		menu_label.setText(Martini.getMenuName());
+		menu_label.setText(Daiquiri.getMenuName());
 		totalCost.setText("Total Cost");
 		totalCost.setColumns(20);
 		
@@ -44,8 +44,8 @@ public class SelectingMartiniQuantity implements ActionListener{
 		formatter.setCommitsOnValidEdit(true);
 		menu_sp.addChangeListener(new ChangeListener(){
 			public void stateChanged(ChangeEvent e){
-				Bartender.numMartini = (Integer)menu_sp.getValue();
-				Integer totalcost =Bartender.numMartini*Martini.menuCost();
+				Bartender.numDaiquiri = (Integer)menu_sp.getValue();
+				Integer totalcost =Bartender.numDaiquiri*Daiquiri.menuCost();
 				totalCost.setText(totalcost.toString()+"won");
 			}
 		});

@@ -9,10 +9,9 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 public class ActionEventHandler implements ActionListener{
-
 	public void actionPerformed(ActionEvent e){
 		JFrame showMenuFrame = new JFrame("Menu");
-		showMenuFrame.setBounds(120,120,600,600);
+		showMenuFrame.setBounds(600,120,600,600);
 		showMenuFrame.setLayout(new BorderLayout());
 		
 		JButton martini = new JButton("Martini");
@@ -43,6 +42,16 @@ public class ActionEventHandler implements ActionListener{
 		
 		ActionListener selectMartiniQuantity = new SelectingMartiniQuantity();
 		martini.addActionListener(selectMartiniQuantity);
+		ActionListener selectManhattanQuantity = new SelectingManhattanQuantity();
+		manhattan.addActionListener(selectManhattanQuantity);
+		ActionListener selectBrooklynQuantity = new SelectingBrooklynQuantity();
+		brooklyn.addActionListener(selectBrooklynQuantity);
+		ActionListener selectDaiquiriQuantity = new SelectingDaiquiriQuantity();
+		daiquiri.addActionListener(selectDaiquiriQuantity);
+		ActionListener selectMargaritaQuantity = new SelectingMargaritaQuantity();
+		margarita.addActionListener(selectMargaritaQuantity);
+		ActionListener selectSidecarQuantity = new SelectingSidecarQuantity();
+		sidecar.addActionListener(selectSidecarQuantity);
 		
 		showMenuFrame.setVisible(true);
 	}

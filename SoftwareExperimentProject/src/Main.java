@@ -6,7 +6,6 @@ import java.awt.event.*;
 
 public class Main {
 	public static void main(String[] args) {
-		
 		Customer Jiwoo = new Customer();
 		Bartender Dongwon = new Bartender();
 		ArrayList<MenuItem> menulist = new ArrayList<MenuItem>();
