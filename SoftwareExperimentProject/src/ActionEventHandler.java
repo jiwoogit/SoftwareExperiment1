@@ -22,8 +22,7 @@ public class ActionEventHandler implements ActionListener{
 		JButton margarita = new JButton("Margarita");
 		JButton sidecar = new JButton("Sidecar");
 		JButton exit = new JButton("Exit");
-		JButton goToOrder = new JButton("Go On to Order");
-		
+
 		JPanel menuPanel = new JPanel();
 		menuPanel.setLayout(new GridLayout(3,2,2,2));
 		menuPanel.add(martini);
@@ -36,14 +35,14 @@ public class ActionEventHandler implements ActionListener{
 		JPanel exitandOrderPanel = new JPanel();
 		exitandOrderPanel.setLayout(new FlowLayout());
 		exitandOrderPanel.add(exit);
-		exitandOrderPanel.add(goToOrder);
+
 		
 		showMenuFrame.add(menuPanel, BorderLayout.CENTER);
 		showMenuFrame.add(exitandOrderPanel, BorderLayout.SOUTH);
+		showMenuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-	
-		//ActionListener clickedMenu = new ActionEventHandler();
-		//orderTab.addActionListener(clickedOrderTab);
+		ActionListener selectMartiniQuantity = new SelectingMartiniQuantity();
+		martini.addActionListener(selectMartiniQuantity);
 		
 		showMenuFrame.setVisible(true);
 	}

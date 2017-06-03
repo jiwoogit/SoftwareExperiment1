@@ -6,12 +6,6 @@ import java.awt.event.*;
 
 public class Main {
 	public static void main(String[] args) {
-		StartingFrame StartFrame = new StartingFrame("Screw Bar");
-	
-		
-		StartFrame.setVisible(true);
-		
-		
 		
 		Customer Jiwoo = new Customer();
 		Bartender Dongwon = new Bartender();
@@ -29,7 +23,11 @@ public class Main {
 		menulist.add(Margarita);
 		menulist.add(Sidecar);
 		Menu menu = new Menu(menulist);
-
+		
+		StartingFrame StartFrame = new StartingFrame("Screw Bar");
+		StartFrame.setVisible(true);
+		
+		
 
 		MenuItem orderedMenu = Jiwoo.order("Brooklyn", menu, Dongwon);
 		Dongwon.orderAccepted(orderedMenu);
