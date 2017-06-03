@@ -22,14 +22,7 @@ public class Bartender{
 	public MenuItem orderAccepted(MenuItem orderedMenu){
 		return orderedMenu;
 	}
-	
-	public void askForMoney(Cocktail cocktail){
-		System.out.println("It is "+cocktail.getPrice()+" won");
-	}
-	
-	public void greeting(){
-		System.out.println("Welcome to our store!! What can I help you? ");
-	}
+
 	
 	
 }
