@@ -5,9 +5,9 @@ import java.text.ParseException;
 import javax.swing.JFrame;
 import javax.swing.JSpinner;
 
-public class ClickingExitInSelectingQuantity implements ActionListener{
+public class ClickingOrderInSelectingQuantity implements ActionListener{
 	JFrame frame = new JFrame();
-	public ClickingExitInSelectingQuantity(JFrame frame){
+	public ClickingOrderInSelectingQuantity(JFrame frame){
 		this.frame = frame;
 	}
 	public void actionPerformed(ActionEvent e){

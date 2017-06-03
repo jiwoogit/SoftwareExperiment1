@@ -28,7 +28,7 @@ public class SelectingMartiniQuantity implements ActionListener{
 		JFrame order = new JFrame("Order");
 		JPanel panel = new JPanel();
 		JPanel exitpanel = new JPanel();
-		JButton exit = new JButton("Exit");
+		JButton orderDone = new JButton("Order");
 		JLabel menu_label = new JLabel();
 		JSpinner menu_sp = new JSpinner();
 		JTextField totalCost = new JTextField();
@@ -50,7 +50,7 @@ public class SelectingMartiniQuantity implements ActionListener{
 				totalCost.setText(totalcost.toString()+"won");
 			}
 		});
-		exit.addActionListener(new ClickingExitInSelectingQuantity(order));
+		orderDone.addActionListener(new ClickingOrderInSelectingQuantity(order));
 			
 		panel.setLayout(new GridLayout(1,2));
 		panel.add(menu_label);
@@ -58,7 +58,7 @@ public class SelectingMartiniQuantity implements ActionListener{
 		
 		exitpanel.setLayout(new FlowLayout());
 		exitpanel.add(totalCost);
-		exitpanel.add(exit);
+		exitpanel.add(orderDone);
 		
 		order.add(panel,BorderLayout.CENTER);
 		order.add(exitpanel,BorderLayout.SOUTH);
