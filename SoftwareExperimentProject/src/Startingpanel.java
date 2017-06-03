@@ -1,8 +1,33 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.event.ActionListener;
 
-public class Startingpanel {
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JPanel;
 
-	public Startingpanel() {
-		// TODO Auto-generated constructor stub
-	}
+public class Startingpanel extends JPanel{
+
+		Image image;
+		JButton orderTab = new LargeButton("Click Here to Order");
+
+
+	   public Startingpanel(){
+	    image = new ImageIcon("./resource/cocktail.jpg").getImage();
+	    add(orderTab);
+	    orderTab.setBackground(Color.white);
+	
+	    orderTab.setOpaque(false);//투명하게
+	    ActionListener clickedOrderTab = new ActionEventHandler();
+		orderTab.addActionListener(clickedOrderTab);
+	    
+	  }
+	  // 오버라이딩..,
+	  public void paint(Graphics g){
+	   g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+	   setOpaque(false);//투명하게
+	   super.paint(g);   
+	   }
 
 }

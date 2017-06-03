@@ -6,15 +6,8 @@ import java.awt.event.*;
 
 public class Main {
 	public static void main(String[] args) {
-		JFrame StartFrame = new JFrame("Screw Bar");
-		StartFrame.setBounds(120,120,600,600);
-		StartFrame.setLayout(new BorderLayout());
-		JButton orderTab = new LargeButton("Click Here to Order");
-		
-		ActionListener clickedOrderTab = new ActionEventHandler();
-		orderTab.addActionListener(clickedOrderTab);
-		
-		StartFrame.add(orderTab,BorderLayout.SOUTH);
+		StartingFrame StartFrame = new StartingFrame("Screw Bar");
+	
 		
 		StartFrame.setVisible(true);
 		
