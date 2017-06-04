@@ -18,15 +18,15 @@ public class Startingpanel extends JPanel{
 	    add(orderTab);
 	    orderTab.setBackground(Color.white);
 	
-	    orderTab.setOpaque(false);//투명하게
+	    orderTab.setOpaque(false);
 	    ActionListener clickedOrderTab = new ActionEventHandler();
 		orderTab.addActionListener(clickedOrderTab);
 	    
 	  }
-	  // 오버라이딩..,
+
 	  public void paint(Graphics g){
 	   g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
-	   setOpaque(false);//투명하게
+	   setOpaque(false);
 	   super.paint(g);   
 	   }
 
