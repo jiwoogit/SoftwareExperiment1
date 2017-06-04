@@ -10,7 +10,7 @@ import javax.swing.JPanel;
 
 public class ActionEventHandler implements ActionListener{
 	public void actionPerformed(ActionEvent e){
-		JFrame showMenuFrame = new JFrame("Menu");
+		JFrame showMenuFrame = new JFrame("Here is the Menu!!!");
 		showMenuFrame.setBounds(600,120,600,600);
 		showMenuFrame.setLayout(new BorderLayout());
 		
@@ -21,6 +21,7 @@ public class ActionEventHandler implements ActionListener{
 		JButton margarita = new JButton("Margarita");
 		JButton sidecar = new JButton("Sidecar");
 		JButton exit = new JButton("Exit");
+		JButton orderMenu = new JButton("Order Cocktails");
 
 		JPanel menuPanel = new JPanel();
 		menuPanel.setLayout(new GridLayout(3,2,2,2));
@@ -34,6 +35,7 @@ public class ActionEventHandler implements ActionListener{
 		JPanel exitandOrderPanel = new JPanel();
 		exitandOrderPanel.setLayout(new FlowLayout());
 		exitandOrderPanel.add(exit);
+		exitandOrderPanel.add(orderMenu);
 
 		
 		showMenuFrame.add(menuPanel, BorderLayout.CENTER);
@@ -53,6 +55,7 @@ public class ActionEventHandler implements ActionListener{
 		ActionListener selectSidecarQuantity = new SelectingSidecarQuantity();
 		sidecar.addActionListener(selectSidecarQuantity);
 		exit.addActionListener(new ClickingExitInMenu(showMenuFrame));
+		orderMenu.addActionListener(new CheckingPayment());
 		
 		showMenuFrame.setVisible(true);
 	}

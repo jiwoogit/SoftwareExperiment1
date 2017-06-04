@@ -25,7 +25,7 @@ public class SelectingBrooklynQuantity implements ActionListener{
 	}
 	
 	public void actionPerformed(ActionEvent e){
-		JFrame order = new JFrame("Order");
+		JFrame order = new JFrame("Select the quantity you wish to order");
 		JPanel panel = new JPanel();
 		JPanel exitpanel = new JPanel();
 		JButton orderDone = new JButton("Order");
@@ -62,7 +62,7 @@ public class SelectingBrooklynQuantity implements ActionListener{
 		
 		order.add(panel,BorderLayout.CENTER);
 		order.add(exitpanel,BorderLayout.SOUTH);
-		order.setBounds(700,200,400,120);
+		order.setBounds(700,200,500,120);
 		order.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		order.setVisible(true);
 	}

@@ -7,7 +7,7 @@ public class Menu {
 		this.items = items;
 	}
 
-	public MenuItem choose(String name){
+	public MenuItem search(String name){
 		for(MenuItem one : items){
 			if(one.getMenuName().equals(name));{
 				return one;
