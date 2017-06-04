@@ -8,9 +8,9 @@ public class Menu {
 	}
 
 	public MenuItem search(String name){
-		for(MenuItem one : items){
-			if(one.getMenuName().equals(name));{
-				return one;
+		for(MenuItem each: items){
+			if(each.getMenuName().equals(name)){
+				return each;
 			}
 		}
 		return null;
