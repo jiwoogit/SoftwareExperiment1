@@ -32,7 +32,7 @@ public class CheckingPayment implements ActionListener{
 		string = string + "# Total:"+ totalMoney + "won";
 		paymentContent.setText(string);
 		back.addActionListener(new ClickingExitInMenu(checkingPaymentFrame));
-	//	pay.addActionListener(new Payment());
+		pay.addActionListener(new PayAndSendPaymentList(string));
 		
 		checkingPaymentFrame.setVisible(true);
 	}
