@@ -18,37 +18,18 @@ public class CommThread extends Thread{
 	
 	public void run() {
 		OutputStream os = null;
+		ObjectOutputStream dos = null;
+
 		try {
 			os = soc.getOutputStream();
-		} catch (IOException e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
-		ObjectOutputStream dos = null;
-		try {
 			dos = new ObjectOutputStream(os);
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
-		try {
 			dos.writeObject(paymentInfo);
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-		try {
 			dos.close();
+			this.soc.close();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		try {
-			this.soc.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+
 	}
 }

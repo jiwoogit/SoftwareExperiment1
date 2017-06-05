@@ -1,6 +1,5 @@
 package Admin;
 
-import java.awt.Paint;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -29,6 +28,8 @@ public class Server {
 				is = soc.getInputStream();
 				ObjectInputStream ois = new ObjectInputStream(is);
 				paymentInfo = (PaySet) ois.readObject();
+				ois.close();
+				soc.close();
 				
 			} catch (IOException e) {
 				// TODO Auto-generated catch block

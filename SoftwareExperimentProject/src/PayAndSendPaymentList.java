@@ -16,30 +16,19 @@ public class PayAndSendPaymentList implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e){
 		PaySet paymentInfo = new PaySet(string);
-		int id = 0;
+		int id = 3;
 
 		Socket soc = null;
 		try {
 			soc = new Socket("localhost", 5000);
-			ObjectOutputStream oos = new ObjectOutputStream(soc.getOutputStream());
-			oos.writeObject(paymentInfo);
+
+			Thread t = new CommThread(soc, id++, paymentInfo);
+			t.start();
 		} catch (IOException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
-		Thread t = new CommThread(soc, id++, paymentInfo);
-		t.start();
 		
-		
-		
-		//oos.close();
-		
-		try {
-			soc.close();
-		} catch (IOException e1) {
-			// TODO Auto-generated catch block
-			e1.printStackTrace();
-		}
 	}
 
 }
