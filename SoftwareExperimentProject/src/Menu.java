@@ -7,10 +7,10 @@ public class Menu {
 		this.items = items;
 	}
 
-	public MenuItem choose(String name){
-		for(MenuItem one : items){
-			if(one.getMenuName().equals(name));{
-				return one;
+	public MenuItem search(String name){
+		for(MenuItem each: items){
+			if(each.getMenuName().equals(name)){
+				return each;
 			}
 		}
 		return null;
