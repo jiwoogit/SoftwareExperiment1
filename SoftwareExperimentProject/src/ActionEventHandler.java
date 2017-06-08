@@ -40,7 +40,7 @@ public class ActionEventHandler implements ActionListener{
 		
 		showMenuFrame.add(menuPanel, BorderLayout.CENTER);
 		showMenuFrame.add(exitandOrderPanel, BorderLayout.SOUTH);
-		showMenuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//showMenuFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		ActionListener selectMartiniQuantity = new SelectingMartiniQuantity();
 		martini.addActionListener(selectMartiniQuantity);
@@ -55,7 +55,8 @@ public class ActionEventHandler implements ActionListener{
 		ActionListener selectSidecarQuantity = new SelectingSidecarQuantity();
 		sidecar.addActionListener(selectSidecarQuantity);
 		exit.addActionListener(new ClickingExitInMenu(showMenuFrame));
-		orderMenu.addActionListener(new CheckingPayment());
+		orderMenu.addActionListener(new CheckingPayment(showMenuFrame));
+		orderMenu.addActionListener(new ClosetheMenuFrame(showMenuFrame));
 		
 		showMenuFrame.setVisible(true);
 	}

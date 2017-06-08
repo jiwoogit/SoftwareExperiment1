@@ -12,7 +12,7 @@ public class Server {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ServerSocket ss = null;
-		int id = 0;
+		int customerNo = 0;
 		PaySet paymentInfo = new PaySet(null);
 		try {
 			ss= new ServerSocket(5000);
@@ -38,6 +38,8 @@ public class Server {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			System.out.println("Customer "+ customerNo+":");
+			customerNo++;
 			paymentInfo.print();
 
 		}

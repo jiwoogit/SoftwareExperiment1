@@ -8,6 +8,10 @@ import javax.swing.JTextField;
 
 public class CheckingPayment implements ActionListener{
 	Bartender bartender = new Bartender();
+	JFrame frame = new JFrame();
+	public CheckingPayment(JFrame frame){
+		this.frame = frame;
+	}
 
 	public void actionPerformed(ActionEvent e){
 		JFrame checkingPaymentFrame = new JFrame("Pay");
@@ -21,7 +25,7 @@ public class CheckingPayment implements ActionListener{
 		checkingPaymentFrame.add(paymentContent, BorderLayout.SOUTH);
 		checkingPaymentFrame.add(back, BorderLayout.NORTH);
 		checkingPaymentFrame.add(pay, BorderLayout.CENTER);
-		checkingPaymentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//	checkingPaymentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		String string = "You ordered ";
 		Iterator<String> iterator = bartender.checkOrderedList().iterator();
@@ -29,10 +33,11 @@ public class CheckingPayment implements ActionListener{
 			string = string + iterator.next()+" ";
 		}
 		String totalMoney =  bartender.CalculateTotalAmountOfMoney() ;
-		string = string + "# Total:"+ totalMoney + "won";
+		string = string + "## Total:"+ totalMoney + "won";
 		paymentContent.setText(string);
 		back.addActionListener(new ClickingExitInMenu(checkingPaymentFrame));
 		pay.addActionListener(new PayAndSendPaymentList(string));
+		pay.addActionListener(new ClosetheMenuFrame(checkingPaymentFrame));
 		
 		checkingPaymentFrame.setVisible(true);
 	}

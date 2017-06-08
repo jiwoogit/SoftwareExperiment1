@@ -16,7 +16,7 @@ public class PayAndSendPaymentList implements ActionListener{
 	
 	public void actionPerformed(ActionEvent e){
 		PaySet paymentInfo = new PaySet(string);
-		int id = 3;
+		int id = 0;
 
 		Socket soc = null;
 		try {

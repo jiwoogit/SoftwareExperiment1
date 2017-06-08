@@ -63,7 +63,7 @@ public class SelectingSidecarQuantity implements ActionListener{
 		order.add(panel,BorderLayout.CENTER);
 		order.add(exitpanel,BorderLayout.SOUTH);
 		order.setBounds(700,200,500,120);
-		order.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	//	order.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		order.setVisible(true);
 	}
 	
