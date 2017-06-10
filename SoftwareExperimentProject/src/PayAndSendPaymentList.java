@@ -28,6 +28,12 @@ public class PayAndSendPaymentList implements ActionListener{
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		Bartender.numMartini=0;
+		Bartender.numManhattan=0;
+		Bartender.numBrooklyn=0;
+		Bartender.numDaiquiri=0;
+		Bartender.numMargarita=0;
+		Bartender.numSidecar=0;
 		
 	}
 

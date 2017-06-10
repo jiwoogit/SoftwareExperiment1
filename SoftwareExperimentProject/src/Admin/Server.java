@@ -12,7 +12,7 @@ public class Server {
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
 		ServerSocket ss = null;
-		int customerNo = 0;
+		int customerNo = 1;
 		PaySet paymentInfo = new PaySet(null);
 		try {
 			ss= new ServerSocket(5000);
