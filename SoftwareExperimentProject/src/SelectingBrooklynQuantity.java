@@ -18,7 +18,6 @@ import javax.swing.event.ChangeListener;
 import javax.swing.text.DefaultFormatter;
 
 public class SelectingBrooklynQuantity implements ActionListener{
-	
 	MenuItem Brooklyn = new MenuItem("Brooklyn",590000);
 	public SelectingBrooklynQuantity(){
 		MenuItem Brooklyn = new MenuItem("Brooklyn",590000);
