@@ -1,8 +1,8 @@
 import java.awt.event.ActionEvent;
+
+import java.io.*;
 import java.awt.event.ActionListener;
 import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.net.Socket;
 
 import file.PaySet;
@@ -17,7 +17,6 @@ public class PayAndSendPaymentList implements ActionListener{
 	public void actionPerformed(ActionEvent e){
 		PaySet paymentInfo = new PaySet(string);
 		int id = 0;
-
 		Socket soc = null;
 		try {
 			soc = new Socket("localhost", 5000);
