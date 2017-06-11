@@ -12,12 +12,7 @@ public class ClickingOrderInSelectingQuantity implements ActionListener{
 	}
 	public void actionPerformed(ActionEvent e){
 		frame.setVisible(false);
-		/*System.out.println(Bartender.numMartini);
-		System.out.println(Bartender.numManhattan);
-		System.out.println(Bartender.numBrooklyn);
-		System.out.println(Bartender.numDaiquiri);
-		System.out.println(Bartender.numMargarita);
-		System.out.println(Bartender.numSidecar);*/
+
 	}
 
 }
