@@ -1,8 +1,6 @@
 package Admin;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.ObjectInputStream;
+import java.io.*;
 import java.net.ServerSocket;
 import java.net.Socket;
 import file.PaySet;
@@ -11,6 +9,7 @@ public class Server {
 
 	@SuppressWarnings("resource")
 	public static void main(String[] args) {
+		
 		ServerSocket ss = null;
 		int customerNo = 1;
 		PaySet paymentInfo = new PaySet(null);
@@ -39,8 +38,23 @@ public class Server {
 				e.printStackTrace();
 			}
 			System.out.println("Customer "+ customerNo+":");
+			FileOutputStream fos = null;
+			try {
+				fos = new FileOutputStream("receipt/Customer "+ customerNo + ".txt");
+				fos.write(paymentInfo.returnString().getBytes());
+				fos.close();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
 			customerNo++;
 			paymentInfo.print();
+
 
 		}
 		

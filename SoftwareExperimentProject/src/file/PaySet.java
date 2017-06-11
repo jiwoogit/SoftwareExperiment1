@@ -12,5 +12,8 @@ public class PaySet implements Serializable{
 	public void print() {
 		System.out.println(info);
 	}
+	public String returnString() {
+		return info;
+	}
 
 }
